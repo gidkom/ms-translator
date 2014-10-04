@@ -1,0 +1,28 @@
+{
+    "name": "gidkom/bingtranslator-php",
+    "description": "Translate text using the Bing Translate API",
+    "version": "1.0.0",
+    "keywords": ["bing", "translate", "language"],
+    "homepage": "https://github.com/gidkom/bingtranslator-php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Gideon Kombian",
+            "email": "yoroumah@gmail.com"
+        }
+    ],
+    "support": {
+        "email": "yoroumah@gmail.com",
+        "issues": "https://github.com/gidkom/bingtranslator-php/issues"
+    },
+    "require": {
+        "php": ">=5.3.0",
+        "ext-curl": "*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Gidkom\\BingTranslator": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
