@@ -1,9 +1,9 @@
 {
-    "name": "gidkom/bingtranslator-php",
-    "description": "Translate text using the Bing Translate API",
+    "name": "gidkom/ms-translator",
+    "description": "Translate text using the Microsoft Translate API",
     "version": "1.0.0",
-    "keywords": ["bing", "translate", "language"],
-    "homepage": "https://github.com/gidkom/bingtranslator-php",
+    "keywords": ["microsoft", "translate", "language"],
+    "homepage": "https://github.com/gidkom/ms-translator",
     "license": "MIT",
     "authors": [
         {
@@ -13,7 +13,7 @@
     ],
     "support": {
         "email": "yoroumah@gmail.com",
-        "issues": "https://github.com/gidkom/bingtranslator-php/issues"
+        "issues": "https://github.com/gidkom/ms-translator/issues"
     },
     "require": {
         "php": ">=5.3.0",
@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Gidkom\\BingTranslator": "src/"
+            "Gidkom\\MsTranslator": "src/"
         }
     },
     "minimum-stability": "dev"

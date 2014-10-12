@@ -1,8 +1,8 @@
 <?php
 
-namespace Gidkom\BingTranslator;
+namespace Gidkom\MsTranslator;
 
-class BingTranslator
+class MsTranslator
 {
     public $client_id;
     public $client_secret;
@@ -97,8 +97,3 @@ class BingTranslator
         return $result;
     }
 }
-	
-	
-	//usage example
-	//$bt = new BingTranslation($your_client_id, $your_secret);
-	//echo $bt->translate('Hello', 'en', 'ru');
