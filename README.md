@@ -40,7 +40,7 @@ include "vendor/autoload.php";
 $client_id = 'abc';
 $client_secret = 'xyz';
 
-$mt = new Gidkom\MsTranslator($client_id, $client_secret);
+$mt = new Gidkom\MsTranslator\MsTranslator($client_id, $client_secret);
 
 Translate to single language
 return $mt->translate('Hello', 'en', 'fr');
