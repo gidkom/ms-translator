@@ -70,12 +70,14 @@ class MsTranslator
      *
      * @param string $text
      * @param string $from  language of text
-     * @param array $to     languages to be translated to
+     * @param array $tos     languages to be translated to
      * @return array        Translations of the text to given languages
      */
     public function multiTranslate($text, $from, $tos)
     {        
         $access_token = $this->get_access_token();
+
+        $result = array();
         
         $result[$from] = $text;
         
