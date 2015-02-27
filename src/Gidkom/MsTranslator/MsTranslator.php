@@ -45,15 +45,20 @@ class MsTranslator
      * Translate text to a specified language
      *
      * @param string $text
-     * @param string $from  language of text
-     * @param string $to    language to be translated to
+      * @param string $to    language to be translated to
+     * @param string $from  language of text   
      * @return string       Translated text
      */
-    public function translate($text, $from, $to)
+    public function translate($text, $to, $from = null)
     {
         $access_token = $this->get_access_token();
+
+        if (is_null($from)) {
+            $from = $this->detectLang($text);
+        }
+
         $url = 'http://api.microsofttranslator.com/V2/Http.svc/Translate?text='.urlencode($text).'&from='.$from.'&to='.$to;
-        
+
         $ch = curl_init();
         curl_setopt($ch, CURLOPT_URL, $url); 
         curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization:bearer '.$access_token));
@@ -97,5 +102,27 @@ class MsTranslator
         }
         
         return $result;
+    }
+
+    /**
+     * Detect the language of a given text
+     *
+     * @param String $text 
+     * @return String           Language of text
+     */
+    public function detectLang($text)
+    {
+        $access_token = $this->get_access_token();
+
+        $url = "http://api.microsofttranslator.com/V2/Http.svc/Detect?text=".urlencode($text);
+
+         $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url); 
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization:bearer '.$access_token));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);  
+        $rsp = curl_exec($ch); 
+        
+        preg_match_all('/<string (.*?)>(.*?)<\/string>/s', $rsp, $matches);
+        return $matches[2][0];
     }
 }

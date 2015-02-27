@@ -24,7 +24,7 @@ The easiest way to install is via [composer](http://getcomposer.org/). Create th
 
 ```json
 {
-	---
+	...
     "require": {
         "gidkom/ms-translator": "dev-master"
     }
@@ -42,12 +42,19 @@ $client_secret = 'xyz';
 
 $mt = new Gidkom\MsTranslator\MsTranslator($client_id, $client_secret);
 
-Translate to single language
-return $mt->translate('Hello', 'en', 'fr');
+//Translate to single language
+$from  = 'en';
+$to = 'fr';
+return $mt->translate('Hello world', $to, $from);
+
+// To auto detect language leave out the $from argument
+return $mt->translate('Hello world', $to);
 
 
 Translate to multiple languagues 
-return $mt->multiTranslate('Hello', 'en', ['fr','de']);
+$from = 'en';
+$to= ['fr', 'de'];
+return $mt->multiTranslate('Hello world', $to, $from);
 
 ```
 
