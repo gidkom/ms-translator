@@ -81,9 +81,7 @@ class MsTranslator
     public function multiTranslate($text, $from, $tos)
     {        
         $access_token = $this->get_access_token();
-
-        $result = array();
-        
+        $result = array();        
         $result[$from] = $text;
         
         foreach($tos as $to)
