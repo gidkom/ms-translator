@@ -1,7 +1,7 @@
 ms-translator
 ==================
 
-[![Build Status](https://scrutinizer-ci.com/g/gidkom/ms-translator/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gidkom/ms-translator/build-status/master)
+[![Build Status](https://scrutinizer-ci.com/g/gidkom/ms-translator/badges/build.png?b=master)](https://scrutinizer-ci.com/g/gidkom/ms-translator/build-status/master)  [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/gidkom/ms-translator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/gidkom/ms-translator/?branch=master)
 
 Translate text using the Bing Translate API
 
